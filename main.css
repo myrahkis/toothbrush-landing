@@ -61,7 +61,7 @@ h2 {
   border: none;
   border-radius: 0.2rem;
   text-transform: uppercase;
-  font-family: 'Arial';
+  font-family: "Arial";
 }
 
 /* HEADER */
@@ -165,12 +165,60 @@ h2 {
 /* BRAND FACTS SECTION */
 
 .brand-facts-section {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  padding: 6rem 0;
+  width: 100%;
   background-color: var(--iron-color);
+}
+.brand-facts-section__img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.brand-facts-section__middle-cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 4rem;
+}
+.brand-facts-section__list {
+  list-style: none;
+}
+.brand-facts-section__list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  line-height: 140%;
+  padding: 3rem 0;
+  padding-left: 5rem;
+  font-family: "Arial";
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #55565a;
+  }
+}
+.brand-facts-section__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-image: url("/assets/img/ul-tick-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.btn--brand-facts {
+  width: 100%;
 }
 
 /* FORM SECTION */
 
 .form-section {
+  height: 100vh;
   background-color: var(--iron-color);
 }
 
