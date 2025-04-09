@@ -8,27 +8,32 @@
   </head>
   <body>
     <header class="header">
-      <p class="header__logo">Incisoor</p>
-      <ul>
-        <li>lorem</li>
-        <li>lorem</li>
-        <li>lorem</li>
-      </ul>
+      <div class="header__wrapper">
+        <p class="header__logo">Incisoor</p>
+        <ul class="header__links">
+          <li class="header__link"><a href="#hero-section">hero</a></li>
+          <li class="header__link"><a href="#brand-facts-section">facts</a></li>
+          <li class="header__link"><a href="#form-section">form</a></li>
+        </ul>
+      </div>
     </header>
-    <section class="hero-section">
-      <h1 class="hero-section__heading">
-        Two line <br />
-        heading
-      </h1>
-      <h2>sed do eiusmod tempor</h2>
-      <ul>
-        <li>info 1</li>
-        <li>info 2</li>
-        <li>info 3</li>
-      </ul>
-      <button>Order</button>
+    <section class="hero-section" id="hero-section">
+      <div>
+        <h1 class="hero-section__heading">
+          Two line <br />
+          heading
+        </h1>
+        <h2>sed do eiusmod tempor</h2>
+        <ul>
+          <li>info 1</li>
+          <li>info 2</li=>
+          <li>info 3</li=>
+        </ul>
+        <button>Order</button>
+      </div>
+      <img src="/assets/img/toothbrush-closeup.png" alt="" />
     </section>
-    <section class="brand-facts-section">
+    <section class="brand-facts-section" id="brand-facts-section">
       <img src="" alt="" />
       <ul>
         <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
@@ -39,7 +44,7 @@
       <button>Order</button>
       <img src="" alt="" />
     </section>
-    <section class="form-section">
+    <section class="form-section" id="form-section">
       <form action="">
         <h2>
           Two line <br />
@@ -53,7 +58,7 @@
       </form>
     </section>
     <footer class="footer">
-      <ul>
+      <ul class="footer__links">
         <li>lorem</li>
         <li>lorem</li>
         <li>lorem</li>
