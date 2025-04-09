@@ -86,7 +86,7 @@ h2 {
   display: flex;
   gap: 12rem;
 }
-.header__logo {
+.logo {
   font-family: "Prata";
   text-transform: uppercase;
   font-size: 2.6rem;
@@ -231,8 +231,64 @@ h2 {
 /* FOOTER */
 
 .footer {
+  display: flex;
+  flex-direction: column;
   background-color: var(--iron-color);
 }
 .footer__links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-family: "Arial";
+  font-style: italic;
   background-color: #222222;
+  border-top: 2px solid #d5c9be;
+  border-bottom: 2px solid #d5c9be;
+}
+.footer__info,
+.footer__terms {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12rem;
+  /* flex-direction: column; */
+}
+.footer__info {
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.footer__terms {
+  padding-bottom: 3rem;
+  font-size: 1.4rem;
+}
+.footer__info__socials {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.footer__info__socials li {
+  cursor: pointer;
+
+  svg {
+    width: 2.5rem;
+    transition: transform 0.2s;
+  }
+}
+
+.footer__info__socials li:hover {
+  svg {
+    transform: rotate(8deg) scale(1.1);
+  }
+}
+
+.footer__terms__policy,
+.footer__terms__terms {
+  cursor: pointer;
+  color: #d5c9be;
+}
+.btn--footer {
+  font-style: italic;
 }
