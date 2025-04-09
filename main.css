@@ -72,9 +72,15 @@ h2 {
   left: 0;
   z-index: 1000;
   display: flex;
-  background-color: var(--dark-brown-color);
+  background-color: transparent;
   width: 60%;
   padding: 2.5rem 12rem;
+  transition: all 0.2s;
+}
+.header.scrolled {
+  width: 100%;
+  background-color: #1b1b1b;
+  box-shadow: 0 0.3rem 0.5rem #161616;
 }
 .header__wrapper {
   display: flex;
