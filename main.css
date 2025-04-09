@@ -26,6 +26,7 @@ html {
 }
 
 body {
+  position: relative;
   color: white;
 }
 
@@ -37,38 +38,67 @@ a {
     color: white;
   }
 }
+h1 {
+  font-size: 6.5rem;
+  font-family: "Prata";
+  margin-bottom: 1.5rem;
+}
+h2 {
+  font-size: 3.5rem;
+  font-family: "Arial";
+}
+
+.text-emphasis {
+  font-family: "Prata";
+  font-size: 2.7rem;
+  /* margin: 0 0.8rem; */
+}
+.order-btn {
+  cursor: pointer;
+  background-color: white;
+  width: fit-content;
+  padding: 2rem 4rem;
+  border: none;
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  font-family: 'Arial';
+}
+
+/* HEADER */
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   display: flex;
   background-color: var(--dark-brown-color);
-  width: 100%;
-  padding: 1rem 6rem;
+  width: 60%;
+  padding: 2.5rem 12rem;
 }
 .header__wrapper {
   display: flex;
-  gap: 6rem;
-  /* width: 60%; */
-  /* background-color: red; */
+  gap: 12rem;
 }
 .header__logo {
   font-family: "Prata";
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 2.6rem;
 }
 .header__links {
   display: flex;
   align-self: center;
   list-style: none;
-  gap: 1rem;
+  gap: 2rem;
   font-family: "Arial";
   font-style: italic;
-  font-size: 0.7rem;
+  font-size: 1.5rem;
 }
 .header__link::after {
   content: "";
   display: block;
   width: 0;
-  height: 0.5px;
+  height: 1px;
   background: var(--dark-dune-color);
   transition: all 0.2s;
 }
@@ -76,17 +106,75 @@ a {
   width: 100%;
 }
 
+/* HERO SECTION */
+
 .hero-section {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
   background-color: var(--dark-brown-color);
 }
+.hero-section__info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  width: 60%;
+  padding: 0 12rem;
+  padding-top: 10%;
+  padding-bottom: 2.5rem;
+}
+.hero-section__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  /* transform: scaleX(-1); */
+}
+.hero-section__info-bullets {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  margin-bottom: 3.5rem;
+}
+.hero-section__info-bullets li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 2rem;
+  padding-left: 4rem;
+  font-family: "Arial";
+}
+.hero-section__info-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-image: url("/assets/img/ul-tick.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+}
+
+/* BRAND FACTS SECTION */
 
 .brand-facts-section {
   background-color: var(--iron-color);
 }
 
+/* FORM SECTION */
+
 .form-section {
   background-color: var(--iron-color);
 }
+
+/* FOOTER */
 
 .footer {
   background-color: var(--iron-color);
