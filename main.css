@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
-@import url("https://fonts.cdnfonts.com/css/arial-2");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
 
 :root {
   --dark-brown-color: #222222;
@@ -58,16 +58,17 @@ a {
 }
 h1 {
   font-size: clamp(2rem, 5vw, 6.5rem);
-  font-family: "Prata";
+  font-family: "Prata", serif;
   margin-bottom: 1.5rem;
 }
 h2 {
   font-size: clamp(1.5rem, 2vw, 3.5rem);
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
 }
 
 .text-emphasis {
-  font-family: "Prata";
+  font-family: "Prata", serif;
   font-size: clamp(1.2rem, 2vw, 2.7rem);
 }
 .order-btn {
@@ -78,7 +79,7 @@ h2 {
   border: none;
   border-radius: 0.2rem;
   text-transform: uppercase;
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
   transition: all 0.2s;
 
   &:hover {
@@ -163,7 +164,7 @@ h2 {
   gap: clamp(2rem, 4vw, 12rem);
 }
 .logo {
-  font-family: "Prata";
+  font-family: "Prata", serif;
   text-transform: uppercase;
   font-size: clamp(1.2rem, 2.5vw, 2.6rem);
 }
@@ -172,7 +173,7 @@ h2 {
   align-self: center;
   list-style: none;
   gap: 2rem;
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
   font-style: italic;
   font-size: 1.5rem;
 }
@@ -216,7 +217,7 @@ h2 {
   gap: 0.8rem;
   font-size: clamp(1rem, 1.5vw, 2rem);
   padding-left: 4rem;
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
 }
 .hero-section__info-bullets li::before {
   content: "";
@@ -263,7 +264,7 @@ h2 {
   line-height: 140%;
   padding: 3rem 0;
   padding-left: 5rem;
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
 
   &:not(:last-child) {
     border-bottom: 1px solid #55565a;
@@ -308,7 +309,7 @@ h2 {
 }
 .form__heading {
   color: var(--oceanic-color);
-  font-family: "Prata";
+  font-family: "Prata", serif;
   font-weight: lighter;
   margin-bottom: 1.5rem;
 }
@@ -316,7 +317,7 @@ h2 {
   border: 2px solid #d6d6d6;
   padding: 1.3rem 2rem;
   border-radius: 0.3rem;
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
   font-size: 1.6rem;
   color: var(--iron-color);
   transition: all 0.15s;
@@ -328,7 +329,7 @@ h2 {
 }
 .form__check-row {
   font-size: 1.5rem;
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
   font-weight: lighter;
   padding: 1rem 0;
 }
@@ -342,6 +343,8 @@ h2 {
   cursor: pointer;
   position: relative;
   padding-left: 2.8rem;
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
 }
 .form__check-btn {
   position: absolute;
@@ -388,7 +391,7 @@ h2 {
   border: none;
   border-radius: 0.3rem;
   padding: clamp(1.5rem, 2vw, 2.8rem) 0;
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
   font-weight: lighter;
   font-size: clamp(1rem, 1.2vw + 0.5rem, 1.8rem);
   text-transform: uppercase;
@@ -412,7 +415,8 @@ h2 {
   gap: clamp(1.5rem, 4vw, 4rem);
   padding: 2rem 0;
   font-size: clamp(1rem, 1.5vw, 1.7rem);
-  font-family: "Arial";
+  font-family: "Arimo", sans-serif;
+  font-weight: lighter;
   font-style: italic;
   background-color: #222222;
   border-top: 2px solid #d5c9be;
@@ -578,7 +582,7 @@ h2 {
   }
   .form__heading {
     color: var(--oceanic-color);
-    font-family: "Prata";
+    font-family: "Prata", serif;
     font-weight: lighter;
     margin-bottom: 1.5rem;
   }
@@ -586,7 +590,7 @@ h2 {
     border: 2px solid #d6d6d6;
     padding: 1.3rem 2rem;
     border-radius: 0.3rem;
-    font-family: "Arial";
+    font-family: "Arimo", sans-serif;
     font-size: 1.6rem;
     color: var(--iron-color);
     transition: all 0.15s;
@@ -614,7 +618,7 @@ h2 {
   }
 }
 
-@media (max-width: 381px) {
+@media (max-width: 400px) {
   .footer__info {
     align-items: start;
     flex-direction: column;
