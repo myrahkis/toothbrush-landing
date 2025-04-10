@@ -179,7 +179,7 @@ h2 {
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
-  background-image: url("/assets/img/ul-tick.png");
+  background-image: url("ul-tick.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 3rem;
@@ -230,7 +230,7 @@ h2 {
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
-  background-image: url("/assets/img/ul-tick-2.png");
+  background-image: url("ul-tick-2.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 3.5rem;
@@ -322,7 +322,7 @@ h2 {
   }
 }
 .form__img {
-  background-image: url("/assets/img/bathroom.png");
+  background-image: url("bathroom.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 45%;
