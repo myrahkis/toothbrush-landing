@@ -8,26 +8,55 @@
     <title>Document</title>
   </head>
   <body>
+    <header class="header-mobile">
+      <p class="logo">Incisoor</p>
+      <ul class="header__links">
+        <li class="header__link underline-hover">
+          <a href="#hero-section">Discover</a>
+        </li>
+        <li class="header__link underline-hover">
+          <a href="#brand-facts-section">Advantages</a>
+        </li>
+        <li class="header__link underline-hover">
+          <a href="#form-section">Join the Experience</a>
+        </li>
+      </ul>
+    </header>
     <header class="header">
       <div class="header__wrapper">
         <p class="logo">Incisoor</p>
         <ul class="header__links">
           <li class="header__link underline-hover">
-            <a href="#hero-section">Discover Incisoor</a>
+            <a href="#hero-section">Discover</a>
           </li>
           <li class="header__link underline-hover">
-            <a href="#brand-facts-section">Our Advantages</a>
+            <a href="#brand-facts-section">Advantages</a>
           </li>
           <li class="header__link underline-hover">
             <a href="#form-section">Join the Experience</a>
           </li>
         </ul>
       </div>
+      <button class="header-btn-mobile">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 20 20"
+          width="800px"
+          height="800px"
+        >
+          <path
+            fill="#d5c9be"
+            fill-rule="evenodd"
+            d="M 19 4 a 1 1 0 0 1 -1 1 H 2 a 1 1 0 0 1 0 -2 h 16 a 1 1 0 0 1 1 1 Z m 0 6 a 1 1 0 0 1 -1 1 H 2 a 1 1 0 1 1 0 -2 h 16 a 1 1 0 0 1 1 1 Z m -1 7 a 1 1 0 1 0 0 -2 H 2 a 1 1 0 1 0 0 2 h 16 Z"
+          />
+        </svg>
+      </button>
     </header>
     <section class="hero-section" id="hero-section">
       <div class="hero-section__info">
         <h1 class="hero-section__heading">
-          Redefining selfcare <br />
+          Redefining selfcare <br class="hero-section__heading--br" />
           with Incisoor
         </h1>
         <h2>Where luxury meets innovative dental care</h2>
@@ -122,11 +151,6 @@
         </div>
         <div class="form__img">
           <img
-            class="form__img--bathroom"
-            src="/assets/img/bathroom.png"
-            alt=""
-          />
-          <img
             class="form__img--girl"
             src="/assets/img/girl-w-brush.png"
             alt=""
@@ -137,10 +161,10 @@
     <footer class="footer">
       <ul class="footer__links">
         <li class="footer__link underline-hover">
-          <a href="#hero-section">Discover Incisoor</a>
+          <a href="#hero-section">Discover</a>
         </li>
         <li class="footer__link underline-hover">
-          <a href="#brand-facts-section">Our Advantages</a>
+          <a href="#brand-facts-section">Advantages</a>
         </li>
         <li class="footer__link underline-hover">
           <a href="#form-section">Join the Experience</a>

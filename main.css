@@ -39,25 +39,24 @@ a {
   }
 }
 h1 {
-  font-size: 6.5rem;
+  font-size: clamp(2rem, 5vw, 6.5rem);
   font-family: "Prata";
   margin-bottom: 1.5rem;
 }
 h2 {
-  font-size: 3.5rem;
+  font-size: clamp(1.5rem, 2vw, 3.5rem);
   font-family: "Arial";
 }
 
 .text-emphasis {
   font-family: "Prata";
-  font-size: 2.7rem;
-  /* margin: 0 0.8rem; */
+  font-size: clamp(1.2rem, 2vw, 2.7rem);
 }
 .order-btn {
   cursor: pointer;
   background-color: white;
   width: fit-content;
-  padding: 2rem 4rem;
+  padding: clamp(1rem, 2.5vw, 2rem) clamp(1rem, 4vw, 4rem);
   border: none;
   border-radius: 0.2rem;
   text-transform: uppercase;
@@ -88,6 +87,16 @@ h2 {
 
 /* HEADER */
 
+.header-mobile {
+  display: none;
+}
+.header-mobile.open {
+  display: flex;
+  flex-direction: column;
+}
+.header-btn-mobile {
+  display: none;
+}
 .header {
   position: fixed;
   top: 0;
@@ -95,8 +104,8 @@ h2 {
   z-index: 1000;
   display: flex;
   background-color: transparent;
-  width: 60%;
-  padding: 2.5rem 12rem;
+  width: 100%;
+  padding: 2.5rem clamp(2rem, 5.5vw, 12rem);
   transition: all 0.2s;
 }
 .header.scrolled {
@@ -106,12 +115,12 @@ h2 {
 }
 .header__wrapper {
   display: flex;
-  gap: 12rem;
+  gap: clamp(2rem, 4vw, 12rem);
 }
 .logo {
   font-family: "Prata";
   text-transform: uppercase;
-  font-size: 2.6rem;
+  font-size: clamp(1.2rem, 2.5vw, 2.6rem);
 }
 .header__links {
   display: flex;
@@ -122,17 +131,6 @@ h2 {
   font-style: italic;
   font-size: 1.5rem;
 }
-/* .header__link::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 1px;
-  background: var(--dark-dune-color);
-  transition: all 0.2s;
-}
-.header__link:hover::after {
-  width: 100%;
-} */
 
 /* HERO SECTION */
 
@@ -140,7 +138,7 @@ h2 {
   position: relative;
   display: flex;
   align-items: flex-end;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: var(--dark-brown-color);
 }
 .hero-section__info {
@@ -148,7 +146,7 @@ h2 {
   flex-direction: column;
   align-self: flex-end;
   width: 60%;
-  padding: 0 12rem;
+  padding: 0 clamp(2rem, 5.5vw, 12rem);
   padding-top: 10%;
   padding-bottom: 2.5rem;
 }
@@ -158,7 +156,6 @@ h2 {
   right: 0;
   width: 40%;
   height: 100%;
-  /* transform: scaleX(-1); */
 }
 .hero-section__info-bullets {
   display: flex;
@@ -173,7 +170,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  font-size: 2rem;
+  font-size: clamp(1rem, 1.5vw, 2rem);
   padding-left: 4rem;
   font-family: "Arial";
 }
@@ -218,7 +215,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 1.5vw, 1.8rem);
   line-height: 140%;
   padding: 3rem 0;
   padding-left: 5rem;
@@ -247,18 +244,15 @@ h2 {
 /* FORM SECTION */
 
 .form-section {
-  /* height: 100vh; */
   background-color: var(--iron-color);
-  padding: 0 12rem;
+  padding: 0 clamp(2rem, 5.5vw, 12rem);
   padding-bottom: 6rem;
 }
 .form {
   position: relative;
   display: flex;
-  /* flex-direction: row; */
   background-color: white;
   border-radius: 1.8rem;
-  padding: 4rem 10rem;
 }
 .form__inputs {
   display: flex;
@@ -266,6 +260,7 @@ h2 {
   gap: 1rem;
   width: 55%;
   color: var(--iron-color);
+  padding: 4rem clamp(2rem, 4.5vw, 10rem);
 }
 .form__heading {
   color: var(--oceanic-color);
@@ -275,7 +270,6 @@ h2 {
 }
 .form__input {
   border: 2px solid #d6d6d6;
-  /* border: 2px solid var(--dark-dune-color); */
   padding: 1.3rem 2rem;
   border-radius: 0.3rem;
   font-family: "Arial";
@@ -325,28 +319,22 @@ h2 {
     background-color: var(--oceanic-color);
     top: 0.18rem;
     left: 0.18rem;
-    /* transform: translate(-50%, -50%); */
     opacity: 0;
   }
 }
 .form__img {
-  /* width: 45%; */
+  background-image: url("/assets/img/bathroom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 45%;
+  border-top-right-radius: 1.8rem;
+  border-bottom-right-radius: 1.8rem;
 }
 .form__img--girl {
   position: absolute;
   bottom: 0rem;
   right: -2%;
-  /* max-width: 100%; */
   height: 110%;
-}
-.form__img--bathroom {
-  position: absolute;
-  bottom: 0rem;
-  right: -4%;
-  max-width: 100%;
-  height: 100%;
-  border-top-right-radius: 1.8rem;
-  border-bottom-right-radius: 1.8rem;
 }
 
 .form__btn {
@@ -355,10 +343,10 @@ h2 {
   color: white;
   border: none;
   border-radius: 0.3rem;
-  padding: 2.8rem 0;
+  padding: clamp(1.5rem, 2vw, 2.8rem) 0;
   font-family: "Arial";
   font-weight: lighter;
-  font-size: 1.8rem;
+  font-size: clamp(1rem, 1.2vw + 0.5rem, 1.8rem);
   text-transform: uppercase;
 }
 
@@ -373,9 +361,9 @@ h2 {
   display: flex;
   list-style: none;
   justify-content: center;
-  gap: 4rem;
+  gap: clamp(1.5rem, 4vw, 4rem);
   padding: 2rem 0;
-  font-size: 1.7rem;
+  font-size: clamp(1rem, 1.5vw, 1.7rem);
   font-family: "Arial";
   font-style: italic;
   background-color: #222222;
@@ -386,8 +374,7 @@ h2 {
 .footer__terms {
   display: flex;
   justify-content: space-between;
-  padding: 0 12rem;
-  /* flex-direction: column; */
+  padding: 0 clamp(2rem, 5.5vw, 12rem);
 }
 .footer__info {
   align-items: center;
@@ -401,13 +388,13 @@ h2 {
 .footer__info__socials {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: clamp(1rem, 2.5vw, 2rem);
 }
 .footer__info__socials li {
   cursor: pointer;
 
   svg {
-    width: 2.5rem;
+    width: clamp(1rem, 5vw, 2.5rem);
     transition: transform 0.2s;
   }
 }
@@ -425,4 +412,172 @@ h2 {
 }
 .btn--footer {
   font-style: italic;
+}
+
+/* ADAPTABILITY */
+
+@media (max-width: 1270px) {
+  .hero-section__info {
+    padding-top: 18%;
+  }
+  .brand-facts-section {
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+  }
+  .form__img--bathroom {
+    position: absolute;
+    bottom: 0rem;
+    right: -10%;
+    max-width: 80%;
+    height: 100%;
+    border-top-right-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .form__img--girl {
+    right: -8%;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: clamp(2.5rem, 5.3vw, 8rem);
+  }
+  h2 {
+    font-size: clamp(2rem, 3.5vw, 5rem);
+  }
+  .text-emphasis {
+    font-size: clamp(1.4rem, 3.8vw, 3rem);
+  }
+
+  .header {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__links {
+    display: none;
+  }
+  .logo {
+    font-size: clamp(1.2rem, 5.5vw, 3rem);
+  }
+  .header-btn-mobile {
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    border: none;
+
+    svg {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+  .hero-section__info-bullets li {
+    font-size: clamp(1.2rem, 3vw, 2.5rem);
+  }
+  .hero-section__info-bullets li::before {
+    width: 2rem;
+    height: 2rem;
+  }
+  .hero-section__heading--br {
+    display: none;
+  }
+  .hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero-section__info {
+    width: 100%;
+    padding-top: 40%;
+    margin-bottom: 3rem;
+  }
+  .hero-section__img {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 30%;
+  }
+
+  .brand-facts-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-facts-section__list li {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+  }
+  .btn--brand-facts {
+    margin-bottom: 3rem;
+  }
+
+  .form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1.8rem;
+  }
+  .form__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    color: var(--iron-color);
+    padding: 4rem clamp(2rem, 4.5vw, 10rem);
+  }
+  .form__heading {
+    color: var(--oceanic-color);
+    font-family: "Prata";
+    font-weight: lighter;
+    margin-bottom: 1.5rem;
+  }
+  .form__input {
+    border: 2px solid #d6d6d6;
+    padding: 1.3rem 2rem;
+    border-radius: 0.3rem;
+    font-family: "Arial";
+    font-size: 1.6rem;
+    color: var(--iron-color);
+    transition: all 0.15s;
+
+    &:focus {
+      outline: 2px solid var(--oceanic-color);
+      outline-offset: 3px;
+    }
+  }
+  .form__img {
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.8rem;
+    border-bottom-right-radius: 1.8rem;
+  }
+  .form__img--girl {
+    position: absolute;
+    bottom: 0rem;
+    right: 0;
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 381px) {
+  .footer__info {
+    align-items: start;
+    flex-direction: column;
+  }
+  .footer__terms {
+    gap: 1rem;
+    flex-direction: column-reverse;
+    width: fit-content;
+  }
+  .footer__info__socials {
+    list-style: none;
+    display: flex;
+    gap: clamp(1rem, 2.5vw, 2rem);
+  }
 }
