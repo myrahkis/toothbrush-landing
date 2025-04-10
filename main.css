@@ -91,8 +91,32 @@ h2 {
   display: none;
 }
 .header-mobile.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20000;
   display: flex;
   flex-direction: column;
+  background-color: #222222;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 0.3rem 0.5rem black;
+}
+.header-mobile__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-mobile__links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+.header-mobile__links li {
+  cursor: pointer;
 }
 .header-btn-mobile {
   display: none;
@@ -460,7 +484,8 @@ h2 {
   .logo {
     font-size: clamp(1.2rem, 5.5vw, 3rem);
   }
-  .header-btn-mobile {
+  .header-btn-mobile,
+  .header-btn-mobile-open {
     cursor: pointer;
     display: block;
     background-color: transparent;

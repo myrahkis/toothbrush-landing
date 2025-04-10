@@ -6,3 +6,21 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header-mobile");
+  const toggleButton = document.querySelector(".header-btn-mobile");
+
+  toggleButton.addEventListener("click", () => {
+    header.classList.toggle("open");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header-mobile");
+  const toggleButton = document.querySelector(".header-btn-mobile-open");
+
+  toggleButton.addEventListener("click", () => {
+    header.classList.remove("open");
+  });
+});
