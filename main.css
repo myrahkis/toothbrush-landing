@@ -129,7 +129,7 @@ h2 {
   flex-direction: column;
   background-color: #222222;
   width: 100%;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem clamp(2rem, 5.5vw, 12rem);
   box-shadow: 0 0.3rem 0.5rem black;
 }
 .header-mobile__top {
@@ -584,7 +584,7 @@ h2 {
   }
   .hero-section__info {
     width: 100%;
-    padding-top: 40%;
+    padding-top: 35%;
     margin-bottom: 3rem;
   }
   .hero-section__img {
