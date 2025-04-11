@@ -334,7 +334,10 @@ h2 {
   padding: 1rem 0;
 }
 .form__checkbox {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
 }
 .form__checkbox:checked ~ .form__check-label .form__check-btn::after {
   opacity: 1;
@@ -351,8 +354,8 @@ h2 {
   display: inline-block;
   top: 0;
   left: 0;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border: 2px solid var(--oceanic-color);
   border-radius: 0.3rem;
 

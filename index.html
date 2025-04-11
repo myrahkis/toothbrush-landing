@@ -134,7 +134,7 @@
       </div>
     </section>
     <section class="form-section" id="form-section">
-      <form action="POST" class="form">
+      <form method="POST" class="form" id="tooth-form">
         <div class="form__inputs">
           <h2 class="form__heading">
             Step Into a New Era <br />
@@ -145,12 +145,14 @@
             type="text"
             name="name"
             placeholder="Name"
+            required
           />
           <input
             class="form__input"
             type="email"
             name="email"
             placeholder="Email"
+            required
           />
           <div class="form__check-row">
             <input
@@ -158,6 +160,7 @@
               type="checkbox"
               name="policyAccept"
               id="policy-accept"
+              required
             />
             <label for="policy-accept" class="form__check-label">
               <span class="form__check-btn"></span>
