@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // форма
 const form = document.getElementById("tooth-form");
-const subBtn = document.querySelector(".form__btnform__btn");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();

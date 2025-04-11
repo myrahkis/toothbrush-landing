@@ -75,12 +75,20 @@ h2 {
   cursor: pointer;
   background-color: white;
   width: fit-content;
-  padding: clamp(1rem, 2.5vw, 2rem) clamp(1rem, 4vw, 4rem);
+  padding: clamp(1rem, 2.5vw, 2rem) clamp(1rem, 4vw, 3.8rem);
   border: none;
   border-radius: 0.2rem;
+  text-align: center;
+  font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+  font-weight: bold;
   text-transform: uppercase;
   font-family: "Arimo", sans-serif;
   transition: all 0.2s;
+
+  &:link,
+  &:visited {
+    color: var(--dark-brown-color);
+  }
 
   &:hover {
     background-color: var(--beige-color);
@@ -453,7 +461,6 @@ h2 {
     transition: transform 0.2s;
   }
 }
-
 .footer__info__socials li:hover {
   svg {
     transform: rotate(8deg) scale(1.1);
@@ -467,9 +474,40 @@ h2 {
 }
 .btn--footer {
   font-style: italic;
+  font-weight: 400;
 }
+/* .footer__info__logo-socials {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+} */
 
 /* ADAPTABILITY */
+
+@media (min-width: 1680px) {
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 7rem);
+  }
+  h2 {
+    font-size: clamp(2rem, 3vw, 4rem);
+  }
+  .order-btn {
+    font-size: clamp(1.5rem, 2vw, 2.2rem);
+  }
+  .header__links {
+    font-size: clamp(1.2rem, 1.8vw, 2rem);
+  }
+  .hero-section__info-bullets li {
+    font-size: clamp(1.2rem, 2vw, 2.2rem);
+  }
+  .brand-facts-section__list li {
+    font-size: clamp(1.2rem, 2vw, 2.2rem);
+  }
+  .form__input {
+    font-size: clamp(1.2rem, 1.8vw, 2rem);
+  }
+}
 
 @media (max-width: 1270px) {
   .hero-section__info {
@@ -623,12 +661,7 @@ h2 {
   .footer__info {
     align-items: start;
     flex-direction: column;
-  }
-  .footer__info__logo-socials {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 2rem;
+    gap: 1rem;
   }
   .footer__terms {
     gap: 1rem;
